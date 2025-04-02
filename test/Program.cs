@@ -22,7 +22,7 @@ builder.Services.AddAutoMapper(assm);
 
 builder.Services.AddDbContext<ApplicationDbContext>(opt =>
 {
-	opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+	opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
 });
 
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();

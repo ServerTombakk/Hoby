@@ -5,7 +5,7 @@ namespace test.Data.Concretes
 {
 	public class UserRepository : GenericRepository<User, ApplicationDbContext>, IUserRepository
 	{
-		public UserRepository()
+		public UserRepository(ApplicationDbContext context) : base(context)
 		{
 		}
 	}

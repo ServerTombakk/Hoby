@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using test.Entities;
 
 namespace test.Data
 {
@@ -8,5 +9,8 @@ namespace test.Data
 		{
 
 		}
+		public DbSet<Order> Orders { get; set; }
+		public DbSet<Product> Products { get; set; }
+		public DbSet<User> Users { get; set; }
 	}
 }

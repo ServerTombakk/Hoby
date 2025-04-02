@@ -12,7 +12,10 @@ namespace test.Data.Concretes
 	{
 		protected DbContext Context;
 		protected DbSet<TEntity> _entity => Context.Set<TEntity>();
-
+		public GenericRepository(TContext context)
+		{
+			Context = context ?? throw new ArgumentNullException(nameof(context));
+		}
 		public TEntity Add(TEntity entity)
 		{
 			_entity.Entry(entity).State = EntityState.Added;
